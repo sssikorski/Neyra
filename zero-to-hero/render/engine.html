@@ -1,0 +1,15 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;700;800&family=JetBrains+Mono:wght@400;500&display=block">
+<style>body{margin:0;background:#000}</style></head><body>
+<canvas id="out"></canvas>
+<script src="engine.js"></script><script src="videos.js"></script>
+<script>
+window.init = async (name) => {
+  const v = V[name];
+  await Promise.all(['800 40px "Inter Tight"','700 40px "Inter Tight"','500 12px "JetBrains Mono"'].map(f => document.fonts.load(f)));
+  await loadImgs(v.imgs);
+  ENG.setup(v.w, v.h);
+  return { w: v.w, h: v.h, dur: v.dur };
+};
+window.frame = (name, t, q) => { const v = V[name]; ctx.setTransform(1,0,0,1,0,0); ctx.clearRect(0,0,W,H); ctx.globalAlpha=1; v.draw(t); ENG.post(t); return out.toDataURL('image/jpeg', q || 0.93); };
+</script></body></html>
