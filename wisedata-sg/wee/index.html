@@ -496,6 +496,19 @@ input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;bac
 @media (max-width:560px){.row .ppg,.row .sal{justify-self:start}}
 
 /* v12: system map */
+.wf{display:grid;grid-template-columns:repeat(5,1fr);margin-top:22px;border:1px solid var(--line);border-radius:18px;background:var(--panel);overflow:hidden}
+.wf>div{padding:16px 18px;border-left:1px solid var(--line)}
+.wf>div:first-child{border-left:0}
+.wf .k{display:block;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-hi);margin-bottom:6px}
+.wf .ok .k{color:var(--live)}
+.wf p{margin:0;font-size:14px;line-height:1.45;color:var(--muted)}
+@media (max-width:980px){.wf{grid-template-columns:1fr}.wf>div{border-left:0;border-top:1px solid var(--line)}.wf>div:first-child{border-top:0}}
+.intg{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:34px}
+.intg>div{display:grid;gap:6px;align-content:start;padding:20px 22px;border:1px solid var(--line);border-radius:18px;background:var(--panel)}
+.intg b{font-family:var(--f-display);font-size:19px;font-weight:600}
+.intg span{color:var(--muted);font-size:15px}
+@media (max-width:980px){.intg{grid-template-columns:1fr 1fr}}
+@media (max-width:620px){.intg{grid-template-columns:1fr}}
 .scn{margin-top:clamp(28px,3vw,40px);display:flex;flex-wrap:wrap;gap:8px}
 .scn button{all:unset;box-sizing:border-box;cursor:pointer;font-family:var(--f-display);font-size:14px;font-weight:500;padding:9px 16px;border-radius:999px;border:1px solid var(--line-strong);color:var(--muted);transition:all .2s}
 .scn button:hover{color:var(--fg)}
@@ -1765,6 +1778,9 @@ li.n{color:var(--dim)!important}
 /* ===== v3: motion hero ===== */
 .weh3 .hx-h{font-size:clamp(44px,4.9vw,72px)}
 .weh3 .hx-body{max-width:52ch}
+.gdh .dch-h{font-size:clamp(34px,4.1vw,54px)}
+.weh3 .hx-h{font-size:min(70px,8.4cqi)}
+@media (max-width:520px){.weh3 .hx-h{font-size:clamp(36px,10.5vw,48px)}}
 .we-st{height:660px}
 .we-st .hx-phone{top:26px;width:286px;height:590px}
 .wp{padding:12px 14px 14px;gap:9px}
@@ -2083,13 +2099,13 @@ li.n{color:var(--dim)!important}
   <div class="wrap hx-grid">
     <div class="hx-copy">
       <div class="plk"><span class="plk-i" style="background-image:var(--lg-wd)" role="img" aria-label="Wise Data logo"></span><div class="plk-t"><b>Wise Data</b><span>Private AI infrastructure <em>· Singapore</em></span></div></div>
-      <h1 class="hx-h" aria-label="Private AI. From the power to the people.">
+      <h1 class="hx-h" aria-label="Private AI. Built from the ground up.">
         <span class="l" aria-hidden="true"><span class="w">Private</span> <span class="w">AI.</span></span>
-        <span class="l" aria-hidden="true"><span class="w">From</span> <span class="w">the</span> <span class="w">power</span></span>
-        <span class="l" aria-hidden="true"><span class="w hx-done">to</span> <span class="w hx-done">the</span> <span class="w hx-done">people.</span></span>
+        <span class="l" aria-hidden="true"><span class="w">Built</span> <span class="w">from</span> <span class="w">the</span></span>
+        <span class="l" aria-hidden="true"><span class="w hx-done">ground</span> <span class="w hx-done">up.</span></span>
       </h1>
-      <p class="hx-sub rise d2">The layers a company needs to run AI on its own terms.</p>
-      <p class="hx-body rise d2">Wise Data builds the four layers of the Wise Stack: the compute, the company memory, the AI workforce and the messenger that connects them. Start with one. Add the rest when you're ready.</p>
+      <p class="hx-body rise d2">Wise Data brings together private compute, secure company knowledge, AI workforces and agent-powered communication — deployed on your infrastructure or in a dedicated private environment.</p>
+      <p class="hx-sub rise d2">One connected ecosystem. Four independent layers. Your data, your infrastructure, your control.</p>
       <div class="hx-badges rise d3">
         <div class="bd"><svg viewBox="0 0 24 24" fill="none" stroke="#7B97FF" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M3 8l9-5 9 5-9 5z"/><path d="M3 12l9 5 9-5M3 16l9 5 9-5"/></svg><div><b>Four layers</b><span>One or all four</span></div></div>
         <div class="bd"><svg viewBox="0 0 24 24" fill="none" stroke="#7B97FF" stroke-width="1.8" aria-hidden="true"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01M7 16.5h.01"/></svg><div><b>Your site or ours</b><span>NVIDIA hardware</span></div></div>
@@ -2478,9 +2494,9 @@ li.n{color:var(--dim)!important}
   <div class="wrap dch-in">
     <div class="dch-copy">
       <div class="plk"><span class="plk-i" style="background-image:var(--lg-gd)" role="img" aria-label="Ghostdrive logo"></span><div class="plk-t"><b>Ghostdrive Enterprise</b><span>Deployed <em>by Wise Data</em></span></div></div>
-      <h1 class="dch-h">Your files. Your AI.<br><span class="dch-g">Your machines.</span></h1>
-      <p class="dch-sub">Ghostdrive for business, deployed by Wise Data.</p>
-      <p class="dch-body">Ghostdrive encrypts files on your devices before they go anywhere. Wise Data runs it on your own nodes and NVIDIA hardware, so your AI can work with company knowledge that stays inside your walls.</p>
+      <h1 class="dch-h">Your company's knowledge.<br><span class="dch-g">Encrypted and under your control.</span></h1>
+      <p class="dch-body">Ghostdrive Enterprise gives organisations a private, encrypted knowledge layer for files, business documents and AI-assisted workflows — deployed on company-controlled infrastructure.</p>
+      <p class="dch-sub">Client-side encryption. Controlled access. Private AI integration.</p>
       <div class="dch-badges">
         <div class="bd"><svg viewBox="0 0 24 24" fill="none" stroke="#7B97FF" stroke-width="1.8" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><div><b>Encrypted on device</b><span>AES-256-GCM</span></div></div>
         <div class="bd"><svg viewBox="0 0 24 24" fill="none" stroke="#7B97FF" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01M7 16.5h.01"/></svg><div><b>Company nodes</b><span>Office or data centre</span></div></div>
@@ -2619,13 +2635,13 @@ li.n{color:var(--dim)!important}
   <div class="wrap hx-grid">
     <div class="hx-copy">
       <div class="we-lock"><span class="we-ico" role="img" aria-label="Wee app icon"></span><div class="we-lt"><b>Wee</b><span>Agentic Messenger <em>by Wise Data</em></span></div></div>
-      <h1 class="hx-h" aria-label="You talk. Your agents talk. Work moves.">
-        <span class="l" aria-hidden="true"><span class="w">You</span> <span class="w">talk.</span></span>
-        <span class="l" aria-hidden="true"><span class="w">Your</span> <span class="w">agents</span> <span class="w">talk.</span></span>
-        <span class="l" aria-hidden="true"><span class="w hx-done">Work</span> <span class="w hx-done">moves.</span></span>
+      <h1 class="hx-h" aria-label="The messenger where people and AI agents work together.">
+        <span class="l" aria-hidden="true"><span class="w">The</span> <span class="w">messenger</span> <span class="w">where</span></span>
+        <span class="l" aria-hidden="true"><span class="w">people</span> <span class="w">and</span> <span class="w">AI</span> <span class="w">agents</span></span>
+        <span class="l" aria-hidden="true"><span class="w hx-done">work</span> <span class="w hx-done">together.</span></span>
       </h1>
-      <p class="hx-sub rise d2">Chat, voice and video. With people, and with their AI agents.</p>
-      <p class="hx-body rise d2">Wee is a full messenger with your Wise Office inside. Text a colleague. Jump on a video call. Call your office and say what you need. Your office settles the details with theirs, and you step in for the decisions.</p>
+      <p class="hx-body rise d2">Wee connects people, teams and AI workforces through chat, voice and video — turning conversations into coordinated work.</p>
+      <p class="hx-sub rise d2">One conversation. People, AI agents, tasks and shared context.</p>
       <div class="hx-badges rise d3">
         <div class="bd"><svg viewBox="0 0 24 24" fill="none" stroke="#7B97FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h12a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H9l-4 3v-3H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/><path d="M18 9l4-2v8l-4-2"/></svg><div><b>Chat, voice, video</b><span>One app, one thread</span></div></div>
         <div class="bd"><svg viewBox="0 0 24 24" fill="none" stroke="#7B97FF" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 10v4M8 7v10M12 4v16M16 7v10M20 10v4"/></svg><div><b>Agents on the line</b><span>They talk, note, act</span></div></div>
@@ -2977,9 +2993,11 @@ li.n{color:var(--dim)!important}
 
     <div class="scn" role="group" aria-label="Pick a task to watch">
       <button type="button" data-s="0" aria-pressed="true">Market entry</button>
-      <button type="button" data-s="1" aria-pressed="false">Acquisition check</button>
-      <button type="button" data-s="2" aria-pressed="false">Cost cutting</button>
-      <button type="button" data-s="3" aria-pressed="false">Board pack</button>
+      <button type="button" data-s="1" aria-pressed="false">Financial intelligence</button>
+      <button type="button" data-s="2" aria-pressed="false">Acquisition due diligence</button>
+      <button type="button" data-s="3" aria-pressed="false">Board reporting</button>
+      <button type="button" data-s="4" aria-pressed="false">Sales operations</button>
+      <button type="button" data-s="5" aria-pressed="false">Business optimisation</button>
     </div>
 
     <div class="ow" id="ow">
@@ -3002,6 +3020,14 @@ li.n{color:var(--dim)!important}
     </div>
     <p class="swipe">Swipe to see the whole office →</p>
 
+    <div class="wf" id="owWf" aria-label="What happens in the selected task">
+      <div><span class="k">Request</span><p data-k="req">Go or no-go on opening in a new market next year.</p></div>
+      <div><span class="k">Agents</span><p data-k="ag">Wise CEO, CMO, CFO and COO, with Marketing, Sales, Finance, Legal, Operations and HR agents</p></div>
+      <div><span class="k">Tools</span><p data-k="tl">Web research, CRM, accounting, filings, task tools</p></div>
+      <div><span class="k">Result</span><p data-k="out">Market entry memo: three scenarios, a recommendation and the open risks</p></div>
+      <div class="ok"><span class="k">Human approval</span><p data-k="ok">You make the go or no-go call. Nothing is sent or signed without your OK.</p></div>
+    </div>
+
     <div class="caps">
       <div><span class="n">1</span><b>Talk to Wise CEO.</b><span>Message or call it in Wee. Or go straight to a department.</span></div>
       <div><span class="n">2</span><b>The office splits the work.</b><span>C-level agents hand tasks to department agents, who work in your tools and on your data.</span></div>
@@ -3011,6 +3037,22 @@ li.n{color:var(--dim)!important}
     <div class="priv">
       <svg viewBox="0 0 24 24" fill="none" stroke="#7B97FF" stroke-width="2" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
       <p><b>Private by design.</b> In the fully private setup, the AI model runs on NVIDIA hardware at your office. Your files, chats and requests stay inside your walls.</p>
+    </div>
+  </div>
+</section>
+
+<!-- INTEGRATIONS -->
+<section class="band bt" id="integrations">
+  <div class="wrap">
+    <h2>Works with the tools you already use.</h2>
+    <p class="lede">Agents work inside your existing systems, with the access you give them and nothing more.</p>
+    <div class="intg">
+      <div><b>Google Workspace and Microsoft 365</b><span>Documents, spreadsheets, drive and shared files.</span></div>
+      <div><b>CRM</b><span>Contacts, deals and pipeline.</span></div>
+      <div><b>ERP and accounting systems</b><span>Ledgers, invoices, payments and reports.</span></div>
+      <div><b>Company databases</b><span>The data your teams already keep, read with the permissions you set.</span></div>
+      <div><b>Email and calendar</b><span>Draft, schedule and follow up. Outgoing messages wait for your OK.</span></div>
+      <div><b>Internal APIs and company software</b><span>Connected to the systems your business runs on. Scope is confirmed in your proposal.</span></div>
     </div>
   </div>
 </section>
@@ -3116,7 +3158,7 @@ li.n{color:var(--dim)!important}
       <div><b>3.8%</b><span>of Singapore firms use AI in core processes. 28.5% have adopted it in some form. Early movers set the pace.</span><em>Ministry of Manpower, April 2026</em></div>
     </div>
     <div class="wait">
-      <div><span class="k">At your numbers</span><b id="waitCost">–</b><span id="waitTxt">is the indicative monthly saving at these inputs.</span></div>
+      <div><span class="k">Indicative monthly saving</span><b id="waitCost">–</b><span id="waitTxt">See where AI can reduce operating costs and free up your team's capacity.</span></div>
       <a class="btn btn-primary" href="#calc">Change the numbers</a>
     </div>
     <p class="wn-note">Using AI is common. Making it pay is harder: 37% of organisations report a positive effect on profit so far. The gap is often in the setup: the data, the process, the people. That is the work we do first. <a href="https://www.mckinsey.com/~/media/mckinsey/business%20functions/quantumblack/our%20insights/the%20state%20of%20ai/the-state-of-ai-in-2026-on-the-road-to-roi.pdf" target="_blank" rel="noopener" style="color:var(--muted)">Source</a></p>
@@ -3362,28 +3404,50 @@ const SC=[
      branch('cfo',[['fin',[0]],['legal',[1]]],'<b>Wise CFO</b> Three-scenario model built. Licensing rules summarised.',g,250),
      branch('coo',[['ops',[0]],['hr',[0]]],'<b>Wise COO</b> Setup plan and hiring timeline drafted.',g,500)]);
    if(g!==gen)return;st('ceo','done');bubble('card',card('Vietnam entry memo','22 pages. Three scenarios, a recommendation and the open risks.','Review','Share'))}},
+ {you:'Why did costs rise last quarter? Compare actuals with budget and forecast the next two quarters.',
+  ceo:'Understood. Wise CFO goes through the accounts and the reports. Wise COO checks what drove the spend.',
+  run:async g=>{st('ceo','work');
+   await Promise.all([branch('cfo',[['fin',[0,1]]],'<b>Wise CFO</b> Actuals compared with budget. Every variance traced to its source.',g),
+     branch('coo',[['ops',[0,1]]],'<b>Wise COO</b> Vendor invoices and headcount changes checked.',g,300)]);
+   if(g!==gen)return;st('ceo','done');bubble('card',card('Variance report and forecast','Costs by driver, variances explained, forecast for the next two quarters.','Review','Share'))}},
  {you:'We may buy a competitor. Run due diligence and tell me what could go wrong.',
   ceo:'Understood. Wise CFO goes through their books and contracts. Wise CMO checks customers and reputation.',
   run:async g=>{st('ceo','work');
    await Promise.all([branch('cfo',[['fin',[0,1]],['legal',[0]]],'<b>Wise CFO</b> Three years of accounts reviewed. Contracts checked for change-of-control clauses.',g),
      branch('cmo',[['sales',[0]],['mkt',[0]]],'<b>Wise CMO</b> Customer overlap and churn checked. Online reputation scanned.',g,300)]);
    if(g!==gen)return;st('ceo','done');bubble('card',card('Due diligence report','9 risks ranked. 3 need your decision before any offer.','Review','Discuss'))}},
- {you:'Cash is tight. Find S$300k of savings next quarter without hurting delivery.',
-  ceo:'On it. Wise CFO reads the spend. Wise COO checks vendors, tools and hiring.',
-  run:async g=>{st('ceo','work');
-   await Promise.all([branch('cfo',[['fin',[0,1]],['legal',[0]]],'<b>Wise CFO</b> Spend sorted by category. Contract exit terms found.',g),
-     branch('coo',[['ops',[0,1]],['hr',[0]]],'<b>Wise COO</b> Vendors and tools compared. Hiring plan re-checked.',g,300)]);
-   if(g!==gen)return;st('ceo','done');bubble('card',card('Savings plan','14 options ranked by saving and risk. Cuts only happen after your approval.','Approve','Review'))}},
  {you:'Prepare the Q3 board pack and the investor update. Explain the numbers that moved most.',
   ceo:'All three C-level agents are pulling their numbers. I will put the pack together.',
   run:async g=>{st('ceo','work');
    await Promise.all([branch('cmo',[['sales',[0]]],'<b>Wise CMO</b> Pipeline and win rates are in.',g),
      branch('cfo',[['fin',[0,1]]],'<b>Wise CFO</b> P&amp;L, cash and forecast are in.',g,250),
      branch('coo',[['hr',[0]],['ops',[1]]],'<b>Wise COO</b> Headcount and delivery notes are in.',g,500)]);
-   if(g!==gen)return;st('ceo','done');bubble('card',card('Board pack drafted','18 pages and a one-page investor note. Waiting for your review.','Review','Share'))}}
+   if(g!==gen)return;st('ceo','done');bubble('card',card('Board pack drafted','18 pages and a one-page investor note. Waiting for your review.','Review','Share'))}},
+ {you:'Review the pipeline. Draft proposals for the five biggest open deals and chase every quote older than two weeks.',
+  ceo:'On it. Wise CMO reviews the pipeline with Sales. Wise CFO checks pricing and margins before anything goes out.',
+  run:async g=>{st('ceo','work');
+   await Promise.all([branch('cmo',[['sales',[0,1]],['mkt',[0]]],'<b>Wise CMO</b> Pipeline reviewed. Stalled deals flagged and proposals drafted.',g),
+     branch('cfo',[['fin',[0]]],'<b>Wise CFO</b> Pricing and margins checked against policy.',g,300)]);
+   if(g!==gen)return;st('ceo','done');bubble('card',card('Pipeline review','5 proposals drafted and 11 follow-ups ready. Nothing is sent until you approve.','Approve','Review'))}},
+ {you:'Find where we lose the most time and money. Recommend what to change and what it would save.',
+  ceo:'On it. Wise COO maps the processes and the tools. Wise CFO puts a price on the waste.',
+  run:async g=>{st('ceo','work');
+   await Promise.all([branch('cfo',[['fin',[0,1]],['legal',[0]]],'<b>Wise CFO</b> Spend sorted by process. Contract exit terms found.',g),
+     branch('coo',[['ops',[0,1]],['hr',[0]]],'<b>Wise COO</b> Process steps timed. Vendors and tools compared.',g,300)]);
+   if(g!==gen)return;st('ceo','done');bubble('card',card('Optimisation plan','14 recommendations ranked by saving and risk. Changes only happen after your approval.','Approve','Review'))}}
 ];
+const WF=[
+ {req:'Go or no-go on opening in a new market next year.',ag:'Wise CEO, CMO, CFO and COO, with Marketing, Sales, Finance, Legal, Operations and HR agents',tl:'Web research, CRM, accounting, filings, task tools',out:'Market entry memo: three scenarios, a recommendation and the open risks',ok:'You make the go or no-go call. Nothing is sent or signed without your OK.'},
+ {req:'Explain what drove costs up and forecast the next two quarters.',ag:'Wise CEO, CFO and COO, with Finance and Operations agents',tl:'Accounting, bank feeds, spreadsheets, task tools',out:'Variance report: actuals against budget, drivers explained, two-quarter forecast',ok:'You review the findings before anything is shared with the board or the team.'},
+ {req:'Due diligence on a company you may acquire.',ag:'Wise CEO, CFO and CMO, with Finance, Legal, Sales and Marketing agents',tl:'Data room documents, accounting, e-signature records, web research',out:'Due diligence report: risks ranked, with the ones that need your decision',ok:'You decide before any offer is made. Agents only prepare and recommend.'},
+ {req:'Quarterly board pack and investor update.',ag:'Wise CEO, CFO, CMO and COO, with Finance, Sales, HR and Operations agents',tl:'Accounting, CRM, HR records, spreadsheets',out:'Board pack and a one-page investor note, with the biggest movements explained',ok:'You review and approve the pack before it is shared.'},
+ {req:'Pipeline review, proposals for open deals and follow-ups on stale quotes.',ag:'Wise CEO, CMO and CFO, with Sales, Marketing and Finance agents',tl:'CRM, email and calendar, accounting, documents',out:'Pipeline review, drafted proposals and follow-ups ready to send',ok:'Proposals and outgoing messages wait for your OK.'},
+ {req:'Find inefficient processes and recommend what to change.',ag:'Wise CEO, COO and CFO, with Operations, HR, Finance and Legal agents',tl:'Task tools, spreadsheets, accounting, contracts',out:'Optimisation plan: recommendations ranked by saving and risk',ok:'Changes only happen after you approve them.'}
+];
+const wfEl=$('owWf');
+function showWf(i){if(!wfEl)return;const w=WF[i];wfEl.querySelectorAll('[data-k]').forEach(e=>{e.textContent=w[e.dataset.k]})}
 async function play(i){const g=++gen;cur=i;clear();
-  document.querySelectorAll('#how .scn button').forEach(b=>b.setAttribute('aria-pressed',String(+b.dataset.s===i)));
+  document.querySelectorAll('#how .scn button').forEach(b=>b.setAttribute('aria-pressed',String(+b.dataset.s===i)));showWf(i);
   const s=SC[i];await sleep(300);await typeIn(s.you,g);if(g!==gen)return;bubble('me',s.you);IE.wee.classList.add('hot');setTimeout(()=>IE.wee.classList.remove('hot'),700);await ceoSays(s.ceo,g,900);if(g!==gen)return;
   await s.run(g);if(g!==gen)return;await sleep(4200);if(g===gen&&vis)play((i+1)%SC.length)}
 document.querySelectorAll('#how .scn button').forEach(b=>b.addEventListener('click',()=>play(+b.dataset.s)));
@@ -3491,7 +3555,7 @@ function calc(){
   const mm=profit>0?setupTotal/profit:0;
   $('rPay').textContent=profit<=0?'–':mm<=.25?'under a week':mm<2.5?(w=>'about '+w+(w===1?' week':' weeks'))(Math.max(1,Math.round(mm*4.33))):'about '+Math.ceil(mm)+' months';
   $('waitCost').textContent=profit>0?money(profit):'–';
-  $('waitTxt').textContent=profit>0?'is the indicative monthly saving at these inputs.':'Try a larger team or a higher share of work to see the effect.';
+  $('waitTxt').textContent=profit>0?'See where AI can reduce operating costs and free up your team\'s capacity.':'Try a larger team or a higher share of work to see the effect.';
   /* workload */
   tween($('ltTasks'),tasks,nf);tween($('ltCred'),credFull,nf);tween($('ltCost'),credUSD,money);
   const per=sel.map(d=>{const fd=(d.ppl/d.ppl0)*f;return{d,fd,tk:d.tasks.filter(t=>t[2]!=='V').reduce((x,t)=>x+t[1],0)*fd,cr:d.base*fd}}),mx=Math.max(...per.map(p=>p.cr));
