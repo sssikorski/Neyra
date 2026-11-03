@@ -1156,14 +1156,12 @@ body[data-view="dc"] .v-office,body[data-view="gd"] .v-office{display:none!impor
 
 /* ===== Nav: burger + menu ===== */
 .nav-r{display:flex;align-items:center;gap:10px;flex:0 0 auto}
-.burger{width:42px;height:42px;border-radius:999px;border:1px solid var(--line-strong);background:rgba(10,14,25,.6);display:grid;place-content:center;gap:5px;cursor:pointer;padding:0;transition:border-color .2s,background .2s}
+.burger{height:42px;border-radius:999px;border:1px solid var(--line-strong);background:rgba(10,14,25,.6);color:var(--fg);display:inline-flex;align-items:center;gap:8px;cursor:pointer;padding:0 16px 0 18px;font-family:var(--f-display);font-weight:600;font-size:15px;letter-spacing:-.005em;white-space:nowrap;transition:border-color .2s,background .2s}
+.burger svg{transition:transform .3s cubic-bezier(.2,.7,.1,1)}
+.burger[aria-expanded="true"] svg{transform:rotate(180deg)}
 .burger:hover{border-color:var(--blue-hi)}
 .burger:focus-visible{outline:2px solid var(--blue-hi);outline-offset:2px}
-.burger span{display:block;width:16px;height:1.6px;border-radius:2px;background:var(--fg);transition:transform .3s cubic-bezier(.2,.7,.1,1),opacity .2s}
 .burger[aria-expanded="true"]{background:var(--blue);border-color:var(--blue)}
-.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6.6px) rotate(45deg)}
-.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
-.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.6px) rotate(-45deg)}
 .nav.open{background:#05070D}
 .menu{position:absolute;left:0;right:0;top:100%;background:#05070D;box-shadow:0 40px 80px -20px rgba(0,0,0,.8);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--line);max-height:calc(100vh - 66px);max-height:calc(100dvh - 66px);overflow-y:auto;animation:mIn .35s cubic-bezier(.2,.7,.1,1)}
 @keyframes mIn{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}
@@ -1183,7 +1181,7 @@ body[data-view="office"] .mpc[data-go="office"] .here,body[data-view="dc"] .mpc[
 .menu-l{display:none;gap:4px;border-top:1px solid var(--line);padding-top:14px}
 .menu-l a{text-decoration:none;color:var(--fg);font-family:var(--f-display);font-size:19px;font-weight:500;padding:10px 0;border-bottom:1px solid var(--line)}
 @media (max-width:900px){.menu-l{display:grid}.menu-p{grid-template-columns:1fr}.mpc{padding:16px 16px 18px}.mpc b{font-size:18px}}
-@media (max-width:520px){.nav-r{gap:8px}.nav .btn{padding:9px 14px;font-size:13.5px}.burger{width:38px;height:38px}}
+@media (max-width:520px){.nav-r{gap:8px}.nav .btn{padding:9px 14px;font-size:13.5px}.burger{height:38px;padding:0 12px 0 14px;font-size:13.5px;gap:6px}}
 
 /* ===== DC hero ===== */
 .dch{position:relative;overflow:hidden;padding-block:clamp(40px,6vw,84px) clamp(60px,8vw,110px)}
@@ -2045,7 +2043,7 @@ li.n{color:var(--dim)!important}
       <a href="#wee-trust">Trust</a>
     </nav>
     <div class="nav-r">
-      <button type="button" class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span></span><span></span><span></span></button>
+      <button type="button" class="burger" id="burger" aria-expanded="false" aria-controls="menu">All Products<svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
       <a class="btn btn-primary v-home" href="#h-contact">Talk to us</a>
       <a class="btn btn-primary v-office" href="#start">Book a demo</a>
       <a class="btn btn-primary v-dc" href="#dc-brief">Investor briefing</a>
@@ -3545,7 +3543,7 @@ function route(first){
     else if(!first||['datacentre','ghostdrive','wee','home','office'].includes(id))requestAnimationFrame(()=>window.scrollTo({top:0,behavior:'instant'}));
   }
 }
-function open(o){burger.setAttribute('aria-expanded',String(o));burger.setAttribute('aria-label',o?'Close menu':'Open menu');menu.hidden=!o;burger.closest('.nav').classList.toggle('open',o);if(o){const f=menu.querySelector('a');f&&f.focus({preventScroll:true})}}
+function open(o){burger.setAttribute('aria-expanded',String(o));menu.hidden=!o;burger.closest('.nav').classList.toggle('open',o);if(o){const f=menu.querySelector('a');f&&f.focus({preventScroll:true})}}
 burger.addEventListener('click',()=>open(menu.hidden));
 menu.addEventListener('click',e=>{if(e.target.closest('a'))open(false)});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!menu.hidden){open(false);burger.focus()}});
