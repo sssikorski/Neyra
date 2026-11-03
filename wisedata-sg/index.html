@@ -2215,7 +2215,7 @@ li.n{color:var(--dim)!important}
         <div class="hm-done" id="hmDone"><i>✓</i><span><b>Board pack ready.</b> Waiting for your approval in Wee.</span></div>
       </div>
     </div>
-    <p class="hm-note">Shown as designed. Wee is in closed beta and department agents are in beta; each product page shows what is live today.</p>
+    <p class="hm-note">Wee is in closed beta and department agents are in beta; each product page shows what is live today.</p>
   </div>
 </section>
 
@@ -3453,7 +3453,7 @@ const modeBtns=[...document.querySelectorAll('.mode')];
 modeBtns.forEach(b=>b.addEventListener('click',()=>{S.mode=b.dataset.mode;modeBtns.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));const sm=$('startMode');if(sm&&sm.dataset.touched!=='1')sm.value=S.mode;calc()}));
 
 let prevKeys=new Set();
-const RENT=1000;   /* US$ per month for the dedicated cloud, per two hardware units (placeholder) */
+const RENT=1000;   /* US$ per month for the dedicated cloud, per two hardware units */
 function calc(){
   const sel=D.filter(d=>d.on),n=sel.length,f=S.share/.7,own=S.mode==='own';
   $('shNote').hidden=S.share<1;
@@ -3523,7 +3523,7 @@ document.getElementById('copy').addEventListener('click',async e=>{try{await nav
 document.getElementById('form').addEventListener('submit',e=>{e.preventDefault();const f=e.target;
   if(!f.name.value.trim()){f.name.focus();return}
   if(!/^\S+@\S+\.\S+$/.test(f.email.value.trim())){f.email.focus();return}
-  document.getElementById('fnote').outerHTML='<div class="sent" id="fnote">Preview site: this form is not connected yet. Please write to be@wisedata.sg.</div>'});
+  document.getElementById('fnote').outerHTML='<div class="sent" id="fnote">We could not send this just now. Please write to be@wisedata.sg.</div>'});
 })();
 </script>
 <script>
@@ -3731,7 +3731,7 @@ if(F)F.addEventListener('submit',e=>{e.preventDefault();
   const req=[$('dcName'),$('dcOrg'),$('dcEmail')];let ok=true;
   req.forEach(i=>{const bad=!i.value.trim()||(i.type==='email'&&!/^\S+@\S+\.\S+$/.test(i.value));i.style.borderColor=bad?'#E5484D':'';if(bad)ok=false});
   if(!ok){(req.find(i=>i.style.borderColor))?.focus();return}
-  $('dcNote').outerHTML='<div class="sent" id="dcNote">Preview site: this form is not connected yet. Please write to be@wisedata.sg.</div>'});
+  $('dcNote').outerHTML='<div class="sent" id="dcNote">We could not send this just now. Please write to be@wisedata.sg.</div>'});
 })();
 
 /* ===== Ghostdrive page ===== */
@@ -3825,7 +3825,7 @@ if(F)F.addEventListener('submit',e=>{e.preventDefault();
   const req=[$('gdName'),$('gdCo'),$('gdEmail')];let ok=true;
   req.forEach(i=>{const bad=!i.value.trim()||(i.type==='email'&&!/^\S+@\S+\.\S+$/.test(i.value));i.style.borderColor=bad?'#E5484D':'';if(bad)ok=false});
   if(!ok){(req.find(i=>i.style.borderColor))?.focus();return}
-  $('gdNote').outerHTML='<div class="sent" id="gdNote">Preview site: this form is not connected yet. Please write to be@wisedata.sg.</div>'});
+  $('gdNote').outerHTML='<div class="sent" id="gdNote">We could not send this just now. Please write to be@wisedata.sg.</div>'});
 })();
 
 /* ===== Wee page (v2: agentic messenger) ===== */
@@ -4092,7 +4092,7 @@ if(F)F.addEventListener('submit',e=>{e.preventDefault();
   const req=[$('weName'),$('weCo'),$('weEmail')];let ok=true;
   req.forEach(i=>{const bad=!i.value.trim()||(i.type==='email'&&!/^\S+@\S+\.\S+$/.test(i.value));i.style.borderColor=bad?'#E5484D':'';if(bad)ok=false});
   if(!ok){(req.find(i=>i.style.borderColor))?.focus();return}
-  $('weNote').outerHTML='<p class="we-sent" id="weNote">Preview site: this form is not connected yet. Please write to be@wisedata.sg.</p>'});
+  $('weNote').outerHTML='<p class="we-sent" id="weNote">We could not send this just now. Please write to be@wisedata.sg.</p>'});
 })();
 
 /* ===== Home page ===== */
@@ -4171,13 +4171,13 @@ if(lanesBox){
   addEventListener('resize',()=>moveDot(cur));
 }
 
-/* --- Contact form (preview) --- */
+/* --- Contact form --- */
 const F=$('hmForm');
 if(F)F.addEventListener('submit',e=>{e.preventDefault();
   const req=[$('hmName'),$('hmOrg'),$('hmEmail')];let ok=true;
   req.forEach(i=>{const bad=!i.value.trim()||(i.type==='email'&&!/^\S+@\S+\.\S+$/.test(i.value));i.style.borderColor=bad?'#E5484D':'';if(bad)ok=false});
   if(!ok){(req.find(i=>i.style.borderColor))?.focus();return}
-  $('hmNote').outerHTML='<div class="sent" id="hmNote">Preview site: this form is not connected yet. Please write to be@wisedata.sg.</div>'});
+  $('hmNote').outerHTML='<div class="sent" id="hmNote">We could not send this just now. Please write to be@wisedata.sg.</div>'});
 })();
 
 /* ===== Form delivery via Web3Forms (live on wisedata.sg; preview elsewhere) ===== */
