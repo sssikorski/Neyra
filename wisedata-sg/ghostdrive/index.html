@@ -1226,6 +1226,8 @@ body[data-view="office"] .mpc[data-go="office"] .here,body[data-view="dc"] .mpc[
 .kc-l li{border-top:1px solid var(--line-strong);padding-top:10px}
 .kc-l b{display:block;font-family:var(--f-display);font-size:15px;font-weight:600;line-height:1.25}
 .kc-l span{display:block;font-size:13.5px;color:var(--muted);line-height:1.4;margin-top:3px}
+.kc-ic li{display:flex;gap:12px;align-items:flex-start}
+.kc-ic svg{width:24px;height:24px;flex:0 0 auto;margin-top:1px}
 .kc-l li:last-child:nth-child(odd){grid-column:1/-1}
 @media (max-width:620px){.kc-l{grid-template-columns:1fr}}
 #dc-hero .dch-h{font-size:clamp(34px,4.1vw,54px)}
@@ -2670,12 +2672,12 @@ li.n{color:var(--dim)!important}
       <div class="pvl rise d2"><svg viewBox="0 0 24 24" fill="none" stroke="#7B97FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><p><b>Fully private.</b> Only the people and AI agents taking part in a conversation can access it.</p></div>
       <div class="kc rise d3">
         <span class="kc-h">What you can do</span>
-        <ul class="kc-l">
-          <li><b>Chat with AI agents</b><span>Ask questions, get answers and bring specialised agents into team discussions.</span></li>
-          <li><b>Meet and collaborate</b><span>Connect through chat, voice and video, with AI agents available when you need them.</span></li>
-          <li><b>Delegate tasks instantly</b><span>Assign research, document creation and other work directly from your conversations.</span></li>
-          <li><b>Turn conversations into action</b><span>Capture meeting notes, organise decisions and keep tasks moving forward.</span></li>
-          <li><b>Connected to Ghostdrive</b><span>Give authorised AI agents access to protected company knowledge and shared context.</span></li>
+        <ul class="kc-l kc-ic">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#7B97FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H8l-4 4z"/></svg><div><b>Chat with AI agents</b><span>Ask questions, get answers and bring specialised agents into team discussions.</span></div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#7B97FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h12a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H9l-4 3v-3H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/><path d="M18 9l4-2v8l-4-2"/></svg><div><b>Meet and collaborate</b><span>Connect through chat, voice and video, with AI agents available when you need them.</span></div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#7B97FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 3L3 10l7 3 3 7z"/><path d="M10 13l11-10"/></svg><div><b>Delegate tasks instantly</b><span>Assign research, document creation and other work directly from your conversations.</span></div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#7B97FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M3.5 6l1.2 1.2L7 5M3.5 12l1.2 1.2L7 11M3.5 18l1.2 1.2L7 17"/></svg><div><b>Turn conversations into action</b><span>Capture meeting notes, organise decisions and keep tasks moving forward.</span></div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#7B97FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><div><b>Connected to Ghostdrive</b><span>Give authorised AI agents access to protected company knowledge and shared context.</span></div></li>
         </ul>
       </div>
       <div class="hx-cta rise d3">
