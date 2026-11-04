@@ -1208,6 +1208,14 @@ body[data-view="office"] .mpc[data-go="office"] .here,body[data-view="dc"] .mpc[
 .dch-g{background:linear-gradient(95deg,#7B97FF,#2C55F0 60%,#9DB4FF);-webkit-background-clip:text;background-clip:text;color:transparent;padding-bottom:.12em;display:inline-block}
 .dch-sub{font-family:var(--f-display);font-size:clamp(19px,1.8vw,23px);font-weight:600;letter-spacing:-0.0075em;margin-top:22px}
 .dch-body{color:var(--muted);font-size:clamp(16.5px,1.4vw,18.5px);max-width:52ch;margin-top:12px}
+.kc{margin-top:28px}
+.kc-h{display:block;font-family:var(--f-mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue-hi);margin-bottom:12px}
+.kc-l{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:14px 24px;max-width:620px}
+.kc-l li{border-top:1px solid var(--line-strong);padding-top:10px}
+.kc-l b{display:block;font-family:var(--f-display);font-size:15px;font-weight:600;line-height:1.25}
+.kc-l span{display:block;font-size:13.5px;color:var(--muted);line-height:1.4;margin-top:3px}
+.kc-l li:last-child:nth-child(odd){grid-column:1/-1}
+@media (max-width:620px){.kc-l{grid-template-columns:1fr}}
 .dch-badges{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;margin-top:28px;row-gap:16px}
 .dch-badges .bd{display:flex;gap:10px;align-items:center;padding:0 16px;border-left:1px solid var(--line-strong)}
 .dch-badges .bd:first-child{padding-left:0;border-left:0}
@@ -2310,12 +2318,12 @@ li.n{color:var(--dim)!important}
     <div class="dch-copy">
       <div class="plk"><span class="plk-i" style="background-image:var(--lg-dc)" role="img" aria-label="Wise Data Centre logo"></span><div class="plk-t"><b>Wise Data Centre</b><span>AI Data Centres <em>by Wise Data</em></span></div></div>
       <h1 class="dch-h">Building the infrastructure<br><span class="dch-g">behind private AI.</span></h1>
-      <p class="dch-sub">Modular AI data centre projects in Johor (Malaysia) and Indonesia.</p>
+      <p class="dch-sub">Malaysia (Johor) and Indonesia (Batam)</p>
       <p class="dch-body">Our projects are in development. The concept is defined, a site has been identified and negotiations are under way. Investors can take part in funding the modules.</p>
       <div class="dch-badges">
-        <div class="bd"><svg viewBox="0 0 24 24" fill="none" stroke="#7B97FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg><div><b>In development</b><span>Concept · site · negotiations</span></div></div>
-        <div class="bd"><svg viewBox="0 0 24 24" fill="none" stroke="#7B97FF" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M3 8l9-5 9 5-9 5z"/><path d="M3 8v8l9 5 9-5V8M12 13v8"/></svg><div><b>Modular build</b><span>Timeline set per project</span></div></div>
-        <div class="bd"><svg viewBox="0 0 24 24" fill="none" stroke="#7B97FF" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="10" r="3"/><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/></svg><div><b>Singapore-based</b><span>Wise Data Pte. Ltd.</span></div></div>
+        <div class="bd"><svg viewBox="0 0 24 24" fill="none" stroke="#7B97FF" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M3 8l9-5 9 5-9 5z"/><path d="M3 8v8l9 5 9-5V8M12 13v8"/></svg><div><span>Deployment model</span><b>Modular AI infrastructure</b></div></div>
+        <div class="bd"><svg viewBox="0 0 24 24" fill="none" stroke="#7B97FF" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><span>Project timeline</span><b>Defined individually for each project</b></div></div>
+        <div class="bd"><svg viewBox="0 0 24 24" fill="none" stroke="#7B97FF" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="10" r="3"/><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/></svg><div><span>Company</span><b>Wise Data Pte. Ltd. (Singapore)</b></div></div>
       </div>
       <div class="dch-cta">
         <a class="btn btn-primary" href="#dc-brief">Request an investor briefing <span aria-hidden="true">→</span></a>
@@ -2493,17 +2501,21 @@ li.n{color:var(--dim)!important}
   <div class="dch-bg" aria-hidden="true"><div class="dch-grid"></div><div class="dch-glow"></div></div>
   <div class="wrap dch-in">
     <div class="dch-copy">
-      <div class="plk"><span class="plk-i" style="background-image:var(--lg-gd)" role="img" aria-label="Ghostdrive logo"></span><div class="plk-t"><b>Ghostdrive Enterprise</b><span>Deployed <em>by Wise Data</em></span></div></div>
-      <h1 class="dch-h">Your company's knowledge.<br><span class="dch-g">Encrypted and under your control.</span></h1>
-      <p class="dch-body">Ghostdrive Enterprise gives organisations a private, encrypted knowledge layer for files, business documents and AI-assisted workflows — deployed on company-controlled infrastructure.</p>
-      <div class="dch-badges">
-        <div class="bd"><svg viewBox="0 0 24 24" fill="none" stroke="#7B97FF" stroke-width="1.8" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><div><b>Client-side encryption</b></div></div>
-        <div class="bd"><svg viewBox="0 0 24 24" fill="none" stroke="#7B97FF" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01M7 16.5h.01"/></svg><div><b>Controlled access</b></div></div>
-        <div class="bd"><svg viewBox="0 0 24 24" fill="none" stroke="#7B97FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><div><b>Private AI integration</b></div></div>
+      <div class="plk"><span class="plk-i" style="background-image:var(--lg-gd)" role="img" aria-label="Ghostdrive logo"></span><div class="plk-t"><b>Ghostdrive Enterprise</b><span>The exclusive enterprise layer <em>by Wise Data</em></span></div></div>
+      <h1 class="dch-h">Private knowledge.<br><span class="dch-g">Enterprise intelligence.</span></h1>
+      <p class="dch-body">Ghostdrive protects your company’s knowledge through client-side encryption. Wise Data brings it into your enterprise with private infrastructure, controlled AI access, enterprise integration and managed deployment.</p>
+      <div class="kc">
+        <span class="kc-h">Key capabilities</span>
+        <ul class="kc-l">
+          <li><b>Client-side encryption</b><span>Your data is encrypted on your device before it ever leaves it.</span></li>
+          <li><b>Private infrastructure</b><span>Run Ghostdrive on company-controlled nodes and infrastructure.</span></li>
+          <li><b>Enterprise AI integration</b><span>Give authorised AI systems secure access to your company’s knowledge.</span></li>
+          <li><b>Managed deployment</b><span>From infrastructure setup to integration, onboarding and ongoing support — delivered by Wise Data.</span></li>
+        </ul>
       </div>
       <div class="dch-cta">
-        <a class="btn btn-primary" href="#gd-pilot">Book an enterprise pilot <span aria-hidden="true">→</span></a>
-        <a class="btn btn-ghost" href="#gd-how">See how it works <span aria-hidden="true">↓</span></a>
+        <a class="btn btn-primary" href="#gd-pilot">Deploy Ghostdrive Enterprise <span aria-hidden="true">→</span></a>
+        <a class="btn btn-ghost" href="#gd-how">Explore the Architecture <span aria-hidden="true">↓</span></a>
       </div>
     </div>
     <div class="dch-stage gd-stage" aria-label="Animation: a file is split into blocks, sealed on the device, and stored on company nodes, where a private AI reads it">
@@ -2633,22 +2645,26 @@ li.n{color:var(--dim)!important}
   </div>
   <div class="wrap hx-grid">
     <div class="hx-copy">
-      <div class="we-lock"><span class="we-ico" role="img" aria-label="Wee app icon"></span><div class="we-lt"><b>Wee</b><span>Agentic Messenger <em>by Wise Data</em></span></div></div>
-      <h1 class="hx-h" aria-label="The messenger where people and AI agents work together.">
-        <span class="l" aria-hidden="true"><span class="w">The</span> <span class="w">messenger</span> <span class="w">where</span></span>
-        <span class="l" aria-hidden="true"><span class="w">people</span> <span class="w">and</span> <span class="w">AI</span> <span class="w">agents</span></span>
-        <span class="l" aria-hidden="true"><span class="w hx-done">work</span> <span class="w hx-done">together.</span></span>
+      <div class="we-lock"><span class="we-ico" role="img" aria-label="Wee app icon"></span><div class="we-lt"><b>Wee</b><span>The AI-powered workspace for teams</span></div></div>
+      <h1 class="hx-h" aria-label="Your team talks. Your AI team gets things done.">
+        <span class="l" aria-hidden="true"><span class="w">Your</span> <span class="w">team</span> <span class="w">talks.</span></span>
+        <span class="l" aria-hidden="true"><span class="w">Your</span> <span class="w">AI</span> <span class="w">team</span></span>
+        <span class="l" aria-hidden="true"><span class="w hx-done">gets</span> <span class="w hx-done">things</span> <span class="w hx-done">done.</span></span>
       </h1>
-      <p class="hx-body rise d2">Wee connects people, teams and AI workforces through chat, voice and video — turning conversations into coordinated work.</p>
-      <p class="hx-sub rise d2">One conversation. People, AI agents, tasks and shared context.</p>
-      <div class="hx-badges rise d3">
-        <div class="bd"><svg viewBox="0 0 24 24" fill="none" stroke="#7B97FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h12a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H9l-4 3v-3H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/><path d="M18 9l4-2v8l-4-2"/></svg><div><b>Chat, voice, video</b><span>One app, one thread</span></div></div>
-        <div class="bd"><svg viewBox="0 0 24 24" fill="none" stroke="#7B97FF" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 10v4M8 7v10M12 4v16M16 7v10M20 10v4"/></svg><div><b>Agents on the line</b><span>They talk, note, act</span></div></div>
-        <div class="bd"><svg viewBox="0 0 24 24" fill="none" stroke="#7B97FF" stroke-width="1.8" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><div><b>On Ghostdrive</b><span>Encrypted memory</span></div></div>
+      <p class="hx-body rise d2">Chat with colleagues, bring AI agents into group conversations, run voice and video meetings, delegate tasks and get work done — all without leaving Wee.</p>
+      <div class="kc rise d3">
+        <span class="kc-h">What you can do</span>
+        <ul class="kc-l">
+          <li><b>Chat with AI agents</b><span>Ask questions, get answers and bring specialised agents into team discussions.</span></li>
+          <li><b>Meet and collaborate</b><span>Connect through chat, voice and video, with AI agents available when you need them.</span></li>
+          <li><b>Delegate tasks instantly</b><span>Assign research, document creation and other work directly from your conversations.</span></li>
+          <li><b>Turn conversations into action</b><span>Capture meeting notes, organise decisions and keep tasks moving forward.</span></li>
+          <li><b>Connected to Ghostdrive</b><span>Give authorised AI agents access to protected company knowledge and shared context.</span></li>
+        </ul>
       </div>
       <div class="hx-cta rise d3">
-        <a class="btn btn-white" href="#wee-beta">Get Wee <span aria-hidden="true">→</span></a>
-        <a class="btn btn-ghost" href="#wee-ways">See it in action <span aria-hidden="true">↓</span></a>
+        <a class="btn btn-white" href="#wee-beta">Explore Wee <span aria-hidden="true">→</span></a>
+        <a class="btn btn-ghost" href="#wee-ways">See How It Works <span aria-hidden="true">↓</span></a>
       </div>
     </div>
 
