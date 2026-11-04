@@ -993,6 +993,10 @@ body:not([data-view="office"]) .v-office{display:none!important}
 .hm-wee{background-image:var(--wlogo)!important;background-size:cover}
 .hmh .hx-h{font-size:clamp(44px,5.2vw,80px)}
 .hmh .hx-body{max-width:52ch}
+.hmh .hx-badges{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;max-width:640px;align-items:start}
+.hmh .hx-badges .bd{align-items:flex-start;padding:0 16px}
+.hmh .hx-badges .bd:first-child{padding-left:0}
+@media (max-width:900px){.hmh .hx-badges{grid-template-columns:1fr;gap:14px}.hmh .hx-badges .bd{padding:0;border:0}}
 
 /* stack visual */
 .hm-st{position:relative;height:620px}
@@ -2121,9 +2125,9 @@ li.n{color:var(--dim)!important}
       <p class="hx-body rise d2">Wise Data brings together private compute, secure company knowledge, AI workforces and agent-powered communication — deployed on your infrastructure or in a dedicated private environment.</p>
       <p class="hx-sub rise d2">One connected ecosystem. Four independent layers. Your data, your infrastructure, your control.</p>
       <div class="hx-badges rise d3">
-        <div class="bd"><svg viewBox="0 0 24 24" fill="none" stroke="#7B97FF" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M3 8l9-5 9 5-9 5z"/><path d="M3 12l9 5 9-5M3 16l9 5 9-5"/></svg><div><b>Four layers</b><span>One or all four</span></div></div>
-        <div class="bd"><svg viewBox="0 0 24 24" fill="none" stroke="#7B97FF" stroke-width="1.8" aria-hidden="true"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01M7 16.5h.01"/></svg><div><b>Your site or ours</b><span>NVIDIA hardware</span></div></div>
-        <div class="bd"><svg viewBox="0 0 24 24" fill="none" stroke="#7B97FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4-3 7.5-7 9-4-1.5-7-5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg><div><b>People sign off</b><span>Agents propose</span></div></div>
+        <div class="bd"><svg viewBox="0 0 24 24" fill="none" stroke="#7B97FF" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M3 8l9-5 9 5-9 5z"/><path d="M3 12l9 5 9-5M3 16l9 5 9-5"/></svg><div><b>Four integrated layers</b><span>Compute, knowledge, AI workforce and communication.</span></div></div>
+        <div class="bd"><svg viewBox="0 0 24 24" fill="none" stroke="#7B97FF" stroke-width="1.8" aria-hidden="true"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01M7 16.5h.01"/></svg><div><b>Built around your needs</b><span>Deploy individual products or the complete ecosystem.</span></div></div>
+        <div class="bd"><svg viewBox="0 0 24 24" fill="none" stroke="#7B97FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4-3 7.5-7 9-4-1.5-7-5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg><div><b>Your infrastructure. Your control.</b><span>On-premises, dedicated private infrastructure or our facilities.</span></div></div>
       </div>
       <div class="hx-cta rise d3">
         <a class="btn btn-white" href="#h-stack">Explore the stack <span aria-hidden="true">↓</span></a>
