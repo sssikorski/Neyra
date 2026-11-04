@@ -1216,6 +1216,10 @@ body[data-view="office"] .mpc[data-go="office"] .here,body[data-view="dc"] .mpc[
 .pvl svg{width:22px;height:22px;flex:0 0 auto;margin-top:1px}
 .pvl p{margin:0;font-size:15px;line-height:1.45;color:var(--muted)}
 .pvl b{color:var(--fg);font-weight:600}
+.kc2{display:grid;grid-template-columns:1fr 1fr;gap:24px 32px;margin-top:28px;max-width:660px}
+.kc2 .kc{margin-top:0}
+.kc-l.one{grid-template-columns:1fr}
+@media (max-width:760px){.kc2{grid-template-columns:1fr}}
 .kc{margin-top:28px}
 .kc-h{display:block;font-family:var(--f-mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue-hi);margin-bottom:12px}
 .kc-l{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:14px 24px;max-width:620px}
@@ -2974,10 +2978,9 @@ li.n{color:var(--dim)!important}
       <p class="hx-body rise d2">An intelligent workforce of specialised AI executives, organised across your company’s departments and designed to work together.</p>
       <p class="hx-body rise d2">Give a task to Wise CEO or speak directly to a department agent. Wise Office connects the right expertise, coordinates execution and turns your instructions into completed work.</p>
       <p class="hx-for rise d3">Designed for founders and enterprise leadership.</p>
-      <div class="hx-badges rise d3">
-        <div class="bd"><svg viewBox="0 0 24 24" fill="none" stroke="#7B97FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><div><b>Private AI</b><span>Your data stays yours</span></div></div>
-        <div class="bd"><svg viewBox="0 0 24 24" fill="none" stroke="#7B97FF" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01M7 16.5h.01M11 7.5h6M11 16.5h6"/></svg><div><b>Locally deployed</b><span>On NVIDIA hardware</span></div></div>
-        <div class="bd"><svg viewBox="0 0 24 24" fill="none" stroke="#7B97FF" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>24/7 availability</b><span>365 days a year</span></div></div>
+      <div class="kc2 rise d3">
+        <div class="kc"><span class="kc-h">How you work</span><ul class="kc-l one"><li><b>One CEO. Every department.</b><span>Delegate to Wise CEO or speak directly with specialised AI executives across your organisation.</span></li><li><b>One instruction. Coordinated execution.</b><span>Your AI executives collaborate, distribute tasks and work together to deliver results.</span></li><li><b>You lead. AI gets to work.</b><span>Set priorities, review progress and stay in control of important decisions and approvals.</span></li></ul></div>
+        <div class="kc"><span class="kc-h">Built for enterprise</span><ul class="kc-l one"><li><b>Private by design</b><span>Your company data and AI workforce operate within your private environment.</span></li><li><b>Runs on your infrastructure</b><span>Deploy locally on your own NVIDIA-powered hardware, with control over your systems and data.</span></li><li><b>Always-on AI workforce</b><span>Your specialised AI executives are available around the clock, ready to take on assigned work.</span></li></ul></div>
       </div>
       <div class="hx-cta rise d3">
         <a class="btn btn-ghost" href="#how">See how it works <span aria-hidden="true">↓</span></a>
