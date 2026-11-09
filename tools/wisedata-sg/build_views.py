@@ -12,8 +12,8 @@ VIEWS = {
                    'Modular AI data centre projects in Johor (Malaysia) and Indonesia. Project information for qualified investors, from Wise Data.'),
     'ghostdrive': ('gd', 'Ghostdrive Enterprise · Wise Data',
                    'Encrypted company files and private AI on your own nodes. Ghostdrive Enterprise, deployed by Wise Data.'),
-    'wee': ('wee', 'Wee · Wise Data',
-            'The agentic messenger: chat, voice and video for people and their AI agents. Wee by Wise Data.'),
+    'onwise': ('wee', 'OnWise · Wise Data',
+            'The agentic messenger: chat, voice and video for people and their AI agents. OnWise by Wise Data.'),
 }
 
 def sub1(pattern, repl, text):
@@ -34,7 +34,7 @@ def make(slug, view, title, desc):
     return t
 
 # home: add canonical only
-home = make('', None, 'Wise Data', 'Wise Data builds the Wise Stack: private AI from the hardware up. Wise Office, Ghostdrive Enterprise, Wee and Wise Data Centre. Singapore.')
+home = make('', None, 'Wise Data', 'Wise Data builds the Wise Stack: private AI from the hardware up. Wise Office, Ghostdrive Enterprise, OnWise and Wise Data Centre. Singapore.')
 # keep original home title/description untouched except canonical
 home = src.replace('<meta property="og:url" content="https://wisedata.sg/">', '<meta property="og:url" content="https://wisedata.sg/">\n<link rel="canonical" href="https://wisedata.sg/">') if 'rel="canonical"' not in src else src
 open(os.path.join(OUT, 'index.html'), 'w', encoding='utf8').write(home)
@@ -57,8 +57,17 @@ nf = re.sub(r'<div class="eyebrow">Legal</div>', '<div class="eyebrow">404</div>
 nf = re.sub(r'<div class="meta">.*?</div>', '', nf, count=1)
 open(os.path.join(OUT, '404.html'), 'w', encoding='utf8').write(nf)
 
-urls = ['', 'office/', 'datacentre/', 'ghostdrive/', 'wee/', 'privacy/', 'terms/', 'cookies/', 'legal/']
+urls = ['', 'office/', 'datacentre/', 'ghostdrive/', 'onwise/', 'privacy/', 'terms/', 'cookies/', 'legal/']
 sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(
     '  <url><loc>https://wisedata.sg/%s</loc></url>\n' % u for u in urls) + '</urlset>\n'
 open(os.path.join(OUT, 'sitemap.xml'), 'w').write(sm)
+# old /wee/ address redirects to /onwise/
+os.makedirs(os.path.join(OUT, 'wee'), exist_ok=True)
+open(os.path.join(OUT, 'wee', 'index.html'), 'w', encoding='utf8').write('''<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>OnWise · Wise Data</title>
+<meta name="robots" content="noindex"><link rel="canonical" href="https://wisedata.sg/onwise/">
+<meta http-equiv="refresh" content="0; url=/onwise/">
+<script>location.replace('/onwise/'+location.hash)</script></head>
+<body><p><a href="/onwise/">OnWise</a></p></body></html>
+''')
 print('wrote 404, sitemap')

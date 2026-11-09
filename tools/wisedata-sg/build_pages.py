@@ -119,14 +119,14 @@ privacy = [
  ('about', 'About this policy', f"""
 <p>{CO} (UEN {UEN}), a company incorporated in Singapore ("<b>Wise Data</b>", "<b>we</b>", "<b>us</b>"), respects your privacy. This policy explains how we collect, use, disclose and look after personal data when you visit <b>wisedata.sg</b> or contact us, in line with Singapore's Personal Data Protection Act 2012 (the "<b>PDPA</b>").</p>
 <p>"Personal data" means data about an individual who can be identified from that data, or from that data and other information we have or are likely to have access to.</p>
-<p>This policy covers our website and our dealings with enquirers, prospective customers, investors and business contacts. It does not cover the data our customers store or process in Wise Office, Ghostdrive Enterprise or Wee; see section 12.</p>
+<p>This policy covers our website and our dealings with enquirers, prospective customers, investors and business contacts. It does not cover the data our customers store or process in Wise Office, Ghostdrive Enterprise or OnWise; see section 12.</p>
 <p>By using our website or submitting your details to us, you acknowledge this policy. Where the PDPA requires your consent, we obtain it as described below.</p>"""),
 
  ('collect', 'Personal data we collect', """
 <p>We collect only what we need. Depending on how you deal with us, this may include:</p>
 <div class="tw"><table>
 <tr><th>Source</th><th>Data</th></tr>
-<tr><td>Contact and enquiry forms (demo requests, pilot requests, investor briefing requests, Wee access requests, general enquiries)</td><td>Name; company; work email address; team size; use case or message; for investor briefings, your indicative ticket range and any details you choose to give us</td></tr>
+<tr><td>Contact and enquiry forms (demo requests, pilot requests, investor briefing requests, OnWise access requests, general enquiries)</td><td>Name; company; work email address; team size; use case or message; for investor briefings, your indicative ticket range and any details you choose to give us</td></tr>
 <tr><td>Email and other correspondence</td><td>Name, email address, phone number if you provide it, the content of your messages and any documents you send us</td></tr>
 <tr><td>Meetings and calls</td><td>Contact details, job title, company and notes of our discussions</td></tr>
 <tr><td>Website visits</td><td>Technical data our hosting provider records in server logs, such as IP address, browser and device type, pages requested, and date and time. We do not use analytics or advertising trackers (see our <a href="/cookies/">Cookie Policy</a>)</td></tr>
@@ -186,7 +186,7 @@ privacy = [
 <p>We send marketing messages only to people who have asked for them or have given consent, and we include a simple way to unsubscribe. We do not send marketing messages by telephone call, text or fax to Singapore telephone numbers listed on the Do Not Call (DNC) Registry unless the PDPA allows it, for example where you have given clear and unambiguous consent. Messages about an existing contract or your own enquiry are not marketing messages. You can opt out at any time by writing to us.</p>"""),
 
  ('customers', 'Customer data in our services', """
-<p>When a customer uses Wise Office, Ghostdrive Enterprise or Wee, the customer decides what data goes into the service and why. In that case Wise Data generally acts as a <b>data intermediary</b> processing data on the customer's behalf under a written agreement, and the customer is responsible for having the right to use that data. This policy does not govern that processing. If you are an individual whose data is held by one of our customers, please contact that customer first.</p>"""),
+<p>When a customer uses Wise Office, Ghostdrive Enterprise or OnWise, the customer decides what data goes into the service and why. In that case Wise Data generally acts as a <b>data intermediary</b> processing data on the customer's behalf under a written agreement, and the customer is responsible for having the right to use that data. This policy does not govern that processing. If you are an individual whose data is held by one of our customers, please contact that customer first.</p>"""),
 
  ('children', 'Children', """
 <p>Our website and services are for businesses and are not directed at children. We do not knowingly collect personal data from anyone under 18. If you believe a child has given us personal data, please contact us and we will delete it.</p>"""),
@@ -208,14 +208,14 @@ terms = [
 <p>These Terms of Use ("<b>Terms</b>") govern your use of the website at wisedata.sg and its sub-pages (the "<b>Site</b>"), operated by {CO} (UEN {UEN}) ("<b>Wise Data</b>", "<b>we</b>", "<b>us</b>"). By using the Site you agree to these Terms and to our <a href="/privacy/">Privacy Policy</a>, <a href="/cookies/">Cookie Policy</a> and <a href="/legal/">Legal Notice</a>. If you do not agree, please do not use the Site.</p>"""),
 
  ('purpose', 'What the Site is for', """
-<p>The Site provides general information about Wise Data and its products and services, including Wise Office, Ghostdrive Enterprise, Wee and Wise Data Centre, and lets you contact us. It is intended for business users and is not directed at consumers or children.</p>
+<p>The Site provides general information about Wise Data and its products and services, including Wise Office, Ghostdrive Enterprise, OnWise and Wise Data Centre, and lets you contact us. It is intended for business users and is not directed at consumers or children.</p>
 <p>Information on the Site is a general description only. It is not an offer capable of acceptance, and it does not by itself create a contract. Services are supplied under a separate written agreement, proposal or order form signed or accepted by both parties (a "<b>Services Agreement</b>"). If a Services Agreement conflicts with these Terms, the Services Agreement prevails for the services it covers.</p>"""),
 
  ('info', 'Accuracy and indicative information', """
 <p>We take reasonable care to keep the Site accurate and current, but we do not warrant that it is complete or error-free. In particular, prices, calculators, cost and savings estimates, timelines, performance figures and market data are <b>indicative</b> only, and any price or commitment is confirmed only in a proposal or Services Agreement. Example conversations, screens and visuals are illustrative. Product features and specifications may change.</p>"""),
 
  ('ip', 'Intellectual property', f"""
-<p>The Site and its content, including text, graphics, logos, animations, software and layout, are owned by or licensed to {CO} and are protected by copyright, trade mark and other laws. "Wise Data", "Wise Office", "Wise Data Centre" and "Wee" are marks of Wise Data. Other names, including Ghostdrive and NVIDIA, belong to their respective owners and are used for identification only.</p>
+<p>The Site and its content, including text, graphics, logos, animations, software and layout, are owned by or licensed to {CO} and are protected by copyright, trade mark and other laws. "Wise Data", "Wise Office", "Wise Data Centre" and "OnWise" are marks of Wise Data. Other names, including Ghostdrive and NVIDIA, belong to their respective owners and are used for identification only.</p>
 <p>You may view the Site and print or download extracts for your own internal business use. You must not copy, reproduce, republish, modify, frame or commercially exploit the Site or its content, or remove any notices from it, without our prior written permission.</p>"""),
 
  ('use', 'Acceptable use', """
@@ -305,7 +305,7 @@ legal = [
 <p>Some statements on the Site look to the future, such as plans, expectations, targets and market opportunities. They reflect our current views and are subject to risks and uncertainties, including regulatory, power availability, construction, supply chain, market and financing risks, which could cause actual outcomes to differ materially. We undertake no obligation to update them except as required by law.</p>"""),
 
  ('product', 'Products, pricing and examples', """
-<p>Descriptions of Wise Office, Ghostdrive Enterprise, Wee and related services are summaries. Prices, calculators, savings and timeline figures are indicative, shown in US dollars unless stated otherwise, and are confirmed only in a proposal or written agreement. Example conversations, interface screens and company names shown on the Site are illustrative, and any company names in them are fictional. Specifications, features and availability may change, and we may update products and the Site without notice.</p>
+<p>Descriptions of Wise Office, Ghostdrive Enterprise, OnWise and related services are summaries. Prices, calculators, savings and timeline figures are indicative, shown in US dollars unless stated otherwise, and are confirmed only in a proposal or written agreement. Example conversations, interface screens and company names shown on the Site are illustrative, and any company names in them are fictional. Specifications, features and availability may change, and we may update products and the Site without notice.</p>
 <p>Ghostdrive is an encrypted storage and memory system. Feature status and technical details of Ghostdrive are as published by Ghostdrive. Wise Data provides enterprise deployment, hardware, Wise Office and support.</p>"""),
 
  ('marks', 'Trade marks and third-party names', """
